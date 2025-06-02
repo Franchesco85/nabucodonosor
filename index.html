@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa de Comidas Nabuconodosor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    </head>
+
+<body>
+
+    <header class="header">
+        <div class="menu container">
+            <a href="index.html" class="logo"> <img src="images/logo.png" alt="Logo Casa de Comidas Nabuconodosor" class="logo-img">
+            </a>
+
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+            <label for="menu-toggle" class="menu-label">
+                <img src="images/menu.png" class="menu-icon" alt="Abrir menú de navegación">
+            </label>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="carrito">
+                <ul>
+                    <li class="submenu">
+                        <img src="images/car.svg" id="img-carrito" alt="Carrito de compras">
+                        <div id="carrito">
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header-content container">
+            <div class="header-txt">
+                <h1>CASA DE COMIDAS NABUCODONOSOR</h1>
+                <p>
+                    Nabuconodosor es una casa de comidas que combina tradición y sabor en cada plato.
+                    Como empresa familiar, ha sido fundada con el propósito de ofrecer recetas
+                    caseras elaboradas con ingredientes frescos y de calidad.
+                </p>
+                <a href="#lista-1" class="btn-1">Ver Menú</a> </div>
+        </div>
+    </header>
+
+    <main> <section class="icons container">
+            <div class="icon"><img src="images/i1.svg" alt="Icono descriptivo 1"></div>
+            <div class="icon"><img src="images/i2.svg" alt="Icono descriptivo 2"></div>
+            <div class="icon"><img src="images/i3.svg" alt="Icono descriptivo 3"></div>
+            <div class="icon"><img src="images/i4.svg" alt="Icono descriptivo 4"></div>
+            <div class="icon"><img src="images/i5.svg" alt="Icono descriptivo 5"></div>
+            <div class="icon"><img src="images/i6.svg" alt="Icono descriptivo 6"></div>
+            <div class="icon"><img src="images/i7.svg" alt="Icono descriptivo 7"></div>
+            <div class="icon"><img src="images/i8.svg" alt="Icono descriptivo 8"></div>
+            <div class="icon"><img src="images/i9.svg" alt="Icono descriptivo 9"></div>
+            <div class="icon"><img src="images/i10.svg" alt="Icono descriptivo 10"></div>
+        </section>
+
+        <section class="products container" id="lista-1">
+            <h2>Variedad de Pizzas</h2>
+            <div class="products-content">
+                <div class="product">
+                    <img src="images/pi1.png" alt="Pizza a la Calabresa">
+                    <div class="product-txt">
+                        <h3>Pizza a la Calabresa</h3>
+                        <p>calidad SUPERIOR</p>
+                        <p class="precio">$15000</p>
+                        <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar al carrito</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="images/pi2.png" alt="Pizza con Panceta y Morrones">
+                    <div class="product-txt">
+                        <h3>Pizza con Panceta y Morrones</h3>
+                        <p>calidad SUPERIOR</p>
+                        <p class="precio">$14000</p>
+                        <a href="#" class="agregar-carrito btn-2" data-id="2">Agregar al carrito</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="images/pi3.png" alt="Pizza con Tomate y Palmitos">
+                    <div class="product-txt">
+                        <h3>Pizza con Tomate y Palmitos</h3>
+                        <p>calidad SUPERIOR</p>
+                        <p class="precio">$14000</p>
+                        <a href="#" class="agregar-carrito btn-2" data-id="3">Agregar al carrito</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="images/pi4.png" alt="Pizza de Muzzarella">
+                    <div class="product-txt">
+                        <h3>Pizza de Muzzarella</h3>
+                        <p>calidad SUPERIOR</p>
+                        <p class="precio">$11000</p>
+                        <a href="#" class="agregar-carrito btn-2" data-id="4">Agregar al carrito</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="images/pi5.png" alt="Pizza con Camarones">
+                    <div class="product-txt">
+                        <h3>Pizza con Camarones</h3>
+                        <p>calidad SUPERIOR</p>
+                        <p class="precio">$16000</p>
+                        <a href="#" class="agregar-carrito btn-2" data-id="5">Agregar al carrito</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="images/pi6.png" alt="Pizza con Jamón y Morrones">
+                    <div class="product-txt">
+                        <h3>Pizza con Jamón y Morrones</h3>
+                        <p>calidad SUPERIOR</p>
+                        <p class="precio">$13000</p>
+                        <a href="#" class="agregar-carrito btn-2" data-id="6">Agregar al carrito</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="images/pi7.png" alt="Pizza con Anchoas">
+                    <div class="product-txt">
+                        <h3>Pizza con Anchoas</h3>
+                        <p>calidad SUPERIOR</p>
+                        <p class="precio">$14000</p>
+                        <a href="#" class="agregar-carrito btn-2" data-id="7">Agregar al carrito</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="images/pi8.png" alt="Pizza de Champignón">
+                    <div class="product-txt">
+                        <h3>Pizza de Champignón</h3>
+                        <p>calidad SUPERIOR</p>
+                        <p class="precio">$14000</p>
+                        <a href="#" class="agregar-carrito btn-2" data-id="8">Agregar al carrito</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="images/pi9.png" alt="Pizza Sorrentina">
+                    <div class="product-txt">
+                        <h3>Pizza Sorrentina</h3>
+                        <p>calidad SUPERIOR</p>
+                        <p class="precio">$11000</p>
+                        <a href="#" class="agregar-carrito btn-2" data-id="9">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products container" id="lista-2">
+            <h2>Variedad de Comidas</h2>
+            <div class="products-content">
+                <div class="product">
+                    <img src="images/e1.png" alt="Hamburguesas Simples y Completas">
+                    <div class="product-txt">
+                        <h3>Hamburguesas Simples y Completas</h3>
+                        <p>calidad SUPERIOR</p>
+                        <p class="precio">$3000</p>
+                        <a href="#" class="agregar-carrito btn-2" data-id="10">Agregar al carrito</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="images/e2.png" alt="Pastas">
+                    <div class="product-txt">
+                        <h3>Pastas</h3>
+                        <p>calidad SUPERIOR</p>
+                        <p class="precio">$200</p> <a href="#" class="agregar-carrito btn-2" data-id="11">Agregar al carrito</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="images/e3.png" alt="Picadas y Tartas">
+                    <div class="product-txt">
+                        <h3>Picadas y Tartas</h3>
+                        <p>calidad SUPERIOR</p>
+                        <p class="precio">$200</p> <a href="#" class="agregar-carrito btn-2" data-id="12">Agregar al carrito</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="images/e4.png" alt="Empanadas">
+                    <div class="product-txt">
+                        <h3>Empanadas</h3>
+                        <p>calidad SUPERIOR</p>
+                        <p class="precio">$200</p> <a href="#" class="agregar-carrito btn-2" data-id="13">Agregar al carrito</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="images/e5.png" alt="Variedad de Carnes">
+                    <div class="product-txt">
+                        <h3>Variedad de Carnes</h3>
+                        <p>calidad SUPERIOR</p>
+                        <p class="precio">$200</p> <a href="#" class="agregar-carrito btn-2" data-id="14">Agregar al carrito</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="images/e6.png" alt="Carnes y Pollo a la Brasa">
+                    <div class="product-txt">
+                        <h3>Carnes y Pollo a la Brasa</h3>
+                        <p>calidad SUPERIOR</p>
+                        <p class="precio">$200</p> <a href="#" class="agregar-carrito btn-2" data-id="15">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews container">
+            <h2>Reseñas de nuestros clientes</h2>
+            <div class="review-grid">
+                <div class="review">
+                    <p>"La pizza con camarones es una locura. Volveré sin duda alguna."</p>
+                    <h4>– Atenea Perez Santillán</h4>
+                </div>
+                <div class="review">
+                    <p>"Excelente atención y sabores caseros. Las empanadas son increíbles."</p>
+                    <h4>– Diego Ramírez</h4>
+                </div>
+                <div class="review">
+                    <p>"Ideal para pedir al mediodía. ¡Riquísimas pastas!"</p>
+                    <h4>– Sofía Herrera</h4>
+                </div>
+                <div class="review">
+                    <p>"La pizza de champiñones fue un descubrimiento. Muy recomendable."</p>
+                    <h4>– Tomás Fernández</h4>
+                </div>
+                <div class="review">
+                    <p>"La pizza de muzzarella esquisita. Volveré de nuevo."</p>
+                    <h4>– Caro Santillán</h4>
+                </div>
+                <div class="review">
+                    <p>"Las empanadas son muy ricas gigantes con mucho relleno. Las de carne picante son impresionantes."</p>
+                    <h4>– Alán Martinez Arellano</h4>
+                </div>
+                <div class="review">
+                    <p>"La comida muy buena y los precios razonables. Me encantaba la pizza de este lugar"</p>
+                    <h4>– Mirian Salvo</h4>
+                </div>
+                <div class="review">
+                    <p>"La pizza es una maravilla, siempre volvemos por la fugazeta, aunque el precio es un poco caro"</p>
+                    <h4>– Sebástian Baraona</h4>
+                </div>
+            </div>
+        </section>
+
+        <div class="page-wrapper">
+    <div class="video-container">
+        <iframe
+            src="https://www.youtube.com/embed/xPPLbEFbCAo"
+            title="Video promocional de Nabuconodosor"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+    </div>
+</div>
+
+        <section class="services">
+            <div class="container"> <h2>Servicios</h2>
+                <div class="services-content"> <div class="service">
+                        <h3>Delivery</h3>
+                        <hr>
+                        <p>
+                            En simples pasos pódes tener tu menú directamente en
+                            tu puerta.
+                        </p>
+                    </div>
+                    <div class="service">
+                        <h3>Elaboración Propia</h3>
+                        <hr>
+                        <p>
+                            Variedad de menú ejecutivos y promociones.
+                            Especialidad en pizzas.
+                        </p>
+                    </div>
+                    <div class="service">
+                        <h3>Menú Mediodia</h3>
+                        <hr>
+                        <p>
+                            De martes a viernes pódes disfrutar
+                            de opciones promocionales con plato
+                            principal, postre y bebida.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <div class="social-icons">
+            <a href="#" class="fab fa-facebook-f" aria-label="Visita nuestra página de Facebook"></a>
+            <a href="#" class="fab fa-instagram" aria-label="Síguenos en Instagram"></a>
+            <a href="#" class="fab fa-youtube" aria-label="Mira nuestros videos en YouTube"></a>
+            <a href="#" class="fab fa-twitter" aria-label="Síguenos en Twitter"></a>
+            <a href="#" class="fab fa-tiktok" aria-label="Síguenos en TikTok"></a>
+        </div>
+        <div class="link">
+            <h3>Ayuda</h3>
+            <ul>
+                <li><a href="contacto.html">Contactanos</a></li> <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Calidad de las Materias Primas</a></li>
+                <li><a href="#">Botón de arrepentimiento</a></li>
+            </ul>
+        </div>
+        <div class="link">
+            <h3>Mi Cuenta</h3>
+            <ul>
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="#">Mi perfil</a></li>
+                <li><a href="#">Pedidos pendientes</a></li>
+                <li><a href="#">Historial de pedidos</a></li>
+            </ul>
+        </div>
+        <div class="link">
+            <h3>Ubicaciones</h3>
+            <ul>
+                <li><a href="https://maps.google.com/?q=Av.+Santa+Fe+2365+-+CABA+-+Palermo" target="_blank"> <i class="fa fa-map-marker-alt"></i> Av. Santa Fe 2365 - CABA - Palermo
+                    </a></li>
+                <li><a href="mailto:comidasnabucodonosor@gmail.com">
+                        <i class="fa fa-envelope"></i> comidasnabucodonosor@gmail.com
+                    </a></li>
+                <li><a href="#">Reservaciones</a></li>
+                <li><a href="#">Chefs</a></li>
+            </ul>
+        </div>
+        <div class="link">
+            <h3>Horarios de Atención</h3>
+            <ul>
+                <li><p>Lunes a martes: 12:00 a.m. – 11:00 p.m.</p></li>
+                <li><p>Jueves a sábado: 11:30 a.m. – 11:30 p.m.</p></li>
+                <li><p>Domingo: 12:30 p.m. – 9:00 p.m.</p></li>
+                <li><p>Miércoles Cerrado</p></li>
+            </ul>
+        </div>
+    </footer>
+    <div class="footer-text" style="background-color: #222; text-align: center; color: white; padding: 15px 0;">
+        Creado por <strong>Francisco Perez</strong> para <strong>Talento Tech 2025</strong>. Todos los derechos reservados.
+    </div>
+
+    <div id="whatsapp-container-fixed" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+        <a href="https://wa.me/5491168578892" class="whatsapp-link" target="_blank" style="display: inline-flex; align-items: center; background-color: #25D366; color: white; padding: 10px 15px; border-radius: 25px; text-decoration: none; font-weight: 500; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+            <i class="fab fa-whatsapp" style="font-size: 1.5em; margin-right: 8px;"></i>
+            <span style="display: inline-flex; align-items: center;">
+                Escribime por Whatsapp
+            </span>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

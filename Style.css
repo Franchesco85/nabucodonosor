@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* --- RESET Y ESTILOS BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #2d343c;
+    color: #FFFFFF; /* Color de texto base por si acaso */
+}
+
+img { /* Regla básica para imágenes responsivas */
+    max-width: 100%;
+    height: auto;
+    display: block; /* Evita espacio extra debajo de las imágenes */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;  /* Padding para evitar que el contenido toque los bordes */
+    padding-right: 15px;
+}
+
+/* --- HEADER Y MENU PRINCIPAL --- */
+.header {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)),
+        url(images/bg.jpg); /* Asegúrate que la ruta a images/bg.jpg sea correcta */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    padding-bottom: 50px; /* Espacio para el contenido del header */
+}
+
+.menu { /* Este div también tiene la clase .container */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative; /* Para el posicionamiento absoluto del navbar móvil */
+}
+
+.logo .logo-img { /* Estilo específico para la imagen dentro del enlace del logo */
+    height: 50px; /* Ajusta la altura según necesites */
+    width: auto;
+    filter: brightness(1.3) contrast(1.2);
+}
+
+/* Checkbox del menú hamburguesa (oculto) */
+.menu-toggle { /* Corresponde a input id="menu-toggle" */
+    display: none;
+}
+
+/* Label para el ícono del menú (hamburguesa) */
+.menu-label { /* Corresponde a label for="menu-toggle" */
+    display: none; /* Oculto en desktop, se muestra en mobile */
+    cursor: pointer;
+    z-index: 1001; /* Para asegurar que esté por encima de otros elementos si hay solapamiento */
+}
+
+.menu-icon { /* Corresponde a img class="menu-icon" dentro del label */
+    width: 30px;
+    height: 30px;
+}
+
+/* Navegación principal (Desktop) */
+.navbar ul {
+    display: flex; /* Alinea los <li> horizontalmente */
+}
+
+.navbar ul li {
+    margin-left: 25px; /* Espacio entre elementos del menú */
+}
+
+.navbar ul li a {
+    font-size: 18px;
+    padding: 10px; /* Padding más equilibrado */
+    color: #FFFFFF;
+    display: block;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #f35200;
+}
+
+/* Carrito de compras (Desktop) */
+.carrito {
+    position: relative; /* Para el submenu */
+}
+
+.carrito #img-carrito { /* Estilo para la imagen del carrito */
+    width: 28px; /* Ajusta según el diseño de tu ícono */
+    height: 28px;
+    cursor: pointer;
+}
+
+.submenu #carrito { /* El contenido desplegable del carrito */
+    display: none;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 10px); /* Debajo del ícono con un pequeño margen */
+    background-color: rgba(50, 55, 60, 0.9); /* Un poco más de opacidad y color diferente */
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    min-width: 380px; /* Ancho mínimo del desplegable */
+    z-index: 1000;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.submenu:hover #carrito {
+    display: block;
+}
+
+#lista-carrito table {
+    width: 100%;
+    border-collapse: collapse; /* Mejora visual de la tabla */
+}
+
+#lista-carrito th, #lista-carrito td {
+    color: #FFFFFF;
+    padding: 10px 8px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+#lista-carrito th:last-child, #lista-carrito td:last-child {
+    text-align: center;
+}
+#lista-carrito tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+.borrar {
+    background-color: #f35200;
+    border-radius: 50%;
+    padding: 6px 11px; /* Ajuste para mejor apariencia */
+    color: #FFFFFF;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    line-height: 1; /* Para centrar la X si es texto */
+    transition: background-color 0.3s ease;
+}
+.borrar:hover {
+    background-color: #d74801;
+}
+
+#vaciar-carrito.btn-2 { /* Estilo si se usa btn-2 */
+    margin-top: 20px;
+    display: block; /* Para que ocupe el ancho y se centre el texto */
+    text-align: center;
+}
+
+
+/* Contenido del Header (Texto y botón) */
+.header-content { /* Este div también tiene la clase .container */
+    text-align: center;
+    padding-top: 60px; /* Espacio desde el menú */
+}
+
+.header-txt h1 {
+    font-size: 56px; /* Ajustado para mejor legibilidad */
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: orange;
+    font-weight: 800; /* Poppins bold es 700, extrabold 800 */
+}
+
+.header-txt p {
+    font-size: 18px;
+    color: #ECEBEB;
+    margin: 0 auto 30px auto; /* Centrado y margen inferior */
+    font-weight: 400; /* Poppins regular */
+    max-width: 650px; /* Limita el ancho para mejor lectura */
+    line-height: 1.6;
+}
+
+.btn-1 {
+    display: inline-block;
+    background-color: #f35200;
+    color: #FFFFFF;
+    padding: 13px 35px;
+    border-radius: 25px;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-1:hover {
+    background-color: #d74801;
+}
+
+/* --- SECCIONES GENERALES (Products, Services, etc.) --- */
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    padding: 10px; /* Esto podría necesitar ser .container también */
+}
+.icon img { width: 30px; }
+
+.products { padding: 70px 0 0 0; text-align: center; }
+h2 { color: #FFFFFF; font-size: 40px; margin-bottom: 35px; }
+.products-content { display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 35px; }
+.product img { width: 250px; margin: 0 auto 15px auto; /* Centrar imagen del producto */}
+.product h3 { font-size: 20px; color: #FFFFFF; margin-bottom: 10px; }
+.product p { font-size: 16px; color: #ECEBEB; margin-bottom: 10px; }
+.precio { color: #f35200 !important; font-weight: 600; }
+
+.btn-2 { /* Estilo global para btn-2 */
+    display: inline-block;
+    padding: 10px 25px;
+    border: 1px solid #f35200;
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-2:hover {
+    background-color: #f35200;
+    color: #FFFFFF;
+}
+
+.services { margin-top: 100px; padding: 70px 0; background-color: #EBEFF1; text-align: center; }
+.services h2 { color: #2d343c; }
+.services-content { display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 35px; } /* Ajustado para que los items se distribuyan */
+.service { background-color: #FFFFFF; box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); padding: 35px; text-align: left; color: #2d343c; border-radius: 8px;}
+.service h3{ font-size: 20px; color: #2d343c; margin-bottom: 10px; }
+hr { width: 100px; border: 0; border-top: 2px solid #f35200; margin: 15px 0; } /* HR debajo del h3 de service */
+.service p { font-size: 16px; color: #575757; margin-top: 15px; }
+
+/* --- FOOTER --- */
+.footer { /* La clase .container ya está en el HTML */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 3rem; 
+    padding-bottom: 1rem; /* Reducido para dar espacio al .footer-text */
+    background-color: #222;
+    color: #fff;
+}
+.footer .link { flex: 1 1 200px; margin: 15px; } /* flex-basis ajustado para mejor distribución */
+.footer .link h3 { color: #fff; font-size: 1.2rem; margin-bottom: 15px; }
+.footer .link ul { list-style: none; padding: 0; }
+.footer .link li { margin-bottom: 10px; }
+.footer .link a { color: #ccc; text-decoration: none; transition: color 0.3s; font-size: 1rem;}
+.footer .link a:hover { color: orange; }
+
+.social-icons { display: flex; gap: 15px; padding: 10px 0; /* Ajustado padding */ } /* margin-right: auto; no es necesario si el .footer es flex y .link ocupa espacio */
+
+.social-icons a { font-size: 28px; color: #fff; transition: color 0.3s; }
+.social-icons a:hover { color: #ffd700; }
+
+.footer-text { /* Estilos para el texto de créditos, ahora parte del CSS */
+    background-color: #222; /* Mismo fondo que el footer */
+    color: white;
+    text-align: center;
+    padding: 20px 15px; /* Padding vertical y horizontal */
+    font-size: 0.9rem;
+    border-top: 1px solid #444; /* Línea separadora opcional */
+}
+.footer-text strong {
+    font-weight: 600; /* Poppins semibold */
+}
+
+
+/* --- OTROS (WhatsApp, Reviews, Video) --- */
+.whatsapp-container { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
+.whatsapp-image { width: 60px; height: auto; cursor: pointer; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
+.whatsapp-menu { display: none; position: absolute; bottom: 70px; right: 0; background-color: white; border: 1px solid #ddd; padding: 10px; border-radius: 5px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
+.whatsapp-container:hover .whatsapp-menu { display: block; }
+
+/* Estilos para el enlace de WhatsApp mejorado */
+.whatsapp-link-styled {
+    position: fixed; /* Para que esté siempre visible */
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre el ícono y el texto */
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+.whatsapp-link-styled:hover {
+    background-color: #1DAE54;
+}
+.whatsapp-link-styled .fab.fa-whatsapp { /* Estilo para el ícono de FontAwesome */
+    font-size: 1.5em; /* Tamaño del ícono */
+}
+.whatsapp-link-styled img { /* Si decides usar la imagen 'llamar.png' */
+    width: 24px; /* Ajusta el tamaño de tu imagen 'llamar.png' */
+    height: 24px;
+}
+
+
+.reviews { margin: 60px auto; text-align: center; } /* .container ya está en el HTML */
+.reviews h2 { font-size: 2rem; margin-bottom: 30px; color: white; }
+.review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; /* padding: 0 20px; no es necesario si .reviews ya es container */ }
+.review { background-color: #f9f9f9; color: #333; padding: 20px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); font-style: italic; transition: transform 0.3s ease; }
+.review:hover { transform: translateY(-5px); }
+.review h4 { margin-top: 15px; font-weight: bold; color: #444; }
+
+.page-wrapper { /* Contenedor para el video si necesitas centrarlo o darle márgenes específicos */
+    padding: 20px 0; /* Espacio arriba y abajo del video */
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    margin: 40px auto;
+    overflow: hidden;
+    background-color: #000;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+
+/* --- ESTILOS RESPONSIVOS --- */
+@media (max-width: 991px) { /* Ajustes para tablets y pantallas medianas */
+    .header-txt h1 {
+        font-size: 48px;
+    }
+    .header-txt p {
+        font-size: 17px;
+        max-width: 550px;
+    }
+    .products-content {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas para productos */
+    }
+    .services-content { /* Asegúrate que en HTML .services-content sea el grid principal y no anidado */
+        grid-template-columns: 1fr; /* 1 columna para servicios en tablets */
+    }
+    .footer .link { 
+        flex-basis: calc(50% - 30px); /* Dos columnas en tablet para los links del footer */
+    }
+}
+
+
+@media (max-width: 768px) { /* Ajustes para móviles - Menú Hamburguesa */
+    .menu {
+        /* El padding del .container ya maneja los laterales */
+    }
+
+    .logo .logo-img {
+        height: 40px; /* Logo un poco más pequeño en móviles */
+    }
+
+    .menu-label { /* Mostrar el ícono de hamburguesa */
+        display: block;
+        order: 3; /* Logo (1 implícito), Carrito (2), Hamburguesa (3) */
+    }
+
+    .navbar {
+        display: none; /* Ocultar navbar por defecto */
+        order: 4; /* Debajo de todo en el DOM visual de flex items */
+        width: 100%; /* Ocupar todo el ancho */
+        position: absolute;
+        top: 100%; /* Justo debajo de la barra .menu */
+        left: 0;
+        right: 0;
+        background-color: #333a42; /* Fondo para el menú desplegado */
+        padding: 10px 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+    }
+
+    .menu-toggle:checked ~ .navbar { /* Mostrar navbar cuando el checkbox está activado */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrar los items de la lista */
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Apilar los <li> verticalmente */
+        width: 100%;
+    }
+
+    .navbar ul li {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar ul li a {
+        padding: 15px 20px; /* Padding más grande para facilitar el toque */
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .navbar ul li:last-child a {
+        border-bottom: none;
+    }
+
+    .carrito {
+        order: 2; /* Carrito entre el logo y la hamburguesa */
+        margin-left: auto; /* Empuja el carrito a la derecha del logo */
+        margin-right: 15px; /* Espacio antes de la hamburguesa */
+    }
+    .submenu:hover #carrito { /* Desactivar hover en móvil para el carrito */
+        display: none;
+    }
+
+
+    /* Ajustes generales para el contenido en móviles */
+    .header {
+        min-height: auto; /* Altura automática para el header */
+        padding-bottom: 40px;
+    }
+    .header-content {
+        padding-top: 40px;
+    }
+    .header-txt h1 {
+        font-size: 32px;
+        line-height: 1.3;
+    }
+    .header-txt p {
+        font-size: 16px;
+        max-width: 100%; /* Ocupar ancho disponible */
+    }
+    .btn-1, .btn-2 {
+        padding: 12px 28px;
+        font-size: 15px;
+    }
+
+    .products { padding: 40px 0 0 0; }
+    .products-content { grid-template-columns: 1fr; } /* 1 columna para productos */
+    .product img { width: 200px; }
+
+    .services { margin-top: 40px; padding: 40px 0; }
+    .services-content { grid-template-columns: 1fr; } /* Ya se aplica desde 991px si está antes */
+
+
+    .footer { padding: 2rem 0 0 0; /* Quitar padding inferior para que footer-text lo maneje */ }
+    .footer .link, .social-icons {
+        flex-basis: 100%; /* Una columna para links del footer */
+        text-align: center;
+        margin: 15px 0;
+    }
+    .social-icons {
+        justify-content: center; /* Centrar los íconos sociales */
+        margin-right: 0; /* Resetear margen */
+        order: -1; /* Poner los íconos sociales primero en móvil */
+    }
+}
